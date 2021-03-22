@@ -52,7 +52,7 @@ jobs:
 
   coverage:
     name: Code coverage
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -62,7 +62,7 @@ jobs:
         with:
           toolchain: stable
           override: true
-
+      # This action runs on ubuntu-latest as not compatible with macos-latest
       - name: Run cargo-tarpaulin
         uses: actions-rs/tarpaulin@v0.1
         with:
