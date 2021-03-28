@@ -8,8 +8,10 @@ async fn health_check() -> HttpResponse {
     HttpResponse::Ok().finish()
 }
 
+#[allow(dead_code)]
 #[derive(serde::Deserialize)]
 struct FormData {
+    #[allow(dead_code)]
     email: String,
     name: String,
 }
